@@ -23,17 +23,26 @@
                     <img src="public/img/logo.svg">
                 </div>
                 <div class="welcome-text">
-                    <h1>SIGN IN</p>
+                    <h1>SIGN IN</h1>
                     <h5>Welcome back! Please enter your details.</h5>
                 </div>
 
                 <div class="login-container">
-                    <form>
+                    <form action="login" method="POST">
+                        <div class = "messages">
+                            <?php
+                                if(isset($messages)){
+                                    foreach($messages as $message) {
+                                        echo $message;
+                                    }
+                                }
+                            ?>
+                        </div>
                         <p>Email</p>
                         <input name="email" type="text" placeholder="Enter your email">
                         <p>Password</p>
                         <input name="password" type="password" placeholder="Enter your password">
-                        <button>Sign up</button>
+                        <button type="submit">Sign up</button>
                     </form>
                 </div>
             </div>
