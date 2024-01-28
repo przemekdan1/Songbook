@@ -42,18 +42,23 @@
                     add project
                 </div>
             </header>
-            <section class="projects">
-                <div id="project-1">
-                    <img src="public/uploads/<?=$project->getImage() ?>">
-                    <div>
-                        <h2><?=$project->getTitle() ?></h2>
-                        <p><?=$project->getDescription() ?></p>
-                        <div class="social-section">
-                            <i class="fas fa-heart"> 600</i>
-                            <i class="fas fa-minus-square"> 121</i>
-                        </div>
-                    </div>
-                </div>
+            <section class="project-form">
+                <h1>Upload</h1>
+                <form action="addProjects" method="POST" ENCTYPE="multipart/form-data">
+                    <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                    <input name="title" type="text" placeholder="title">
+                    <textarea name="description" rows="5" placeholder="description"></textarea>
+
+                    <input type="file" name="file">
+                    <button type="submit">send</button>
+
+                </form>
             </section>
         </main>
     </div>
