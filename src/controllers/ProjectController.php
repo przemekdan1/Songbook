@@ -27,12 +27,12 @@ class ProjectController extends AppController
     private function validate($file) : bool
     {
         if ($file['size'] > self::MAX_FILE_SIZE) {
-            $this->message[] = 'File is too large for destination file system.';
+            $this->messages[] = 'File is too large for destination file system.';
             return false;
         }
 
         if (!isset($file['type']) || !in_array($file['type'], self::SUPPORTED_TYPES)) {
-            $this->message[] = 'File type is not supported.';
+            $this->messages[] = 'File type is not supported.';
             return false;
         }
         return true;
