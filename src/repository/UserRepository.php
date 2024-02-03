@@ -22,8 +22,8 @@ class UserRepository extends Repository
         return new \models\User(
             $user['email'],
             $user['password'],
-            $user['name'],
-            $user['surname'],
+            //$user['name'],
+            //$user['surname'],
         );
     }
 
