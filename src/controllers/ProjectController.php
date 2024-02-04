@@ -43,16 +43,26 @@ class ProjectController extends AppController
     {
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
-        if($contentType === "application/json")
-        {
+        if ($contentType === "application/json") {
             $content = trim(file_get_contents("php://input"));
-            $decoded = json_decode($content,true);
+            $decoded = json_decode($content, true);
 
             header('Content-type: application/json');
             http_response_code(200);
 
             echo json_encode($this->projectRepository->getProjectsByTitle($decoded['search']));
         }
+    }
+
+    public function like (int $id)
+    {
+        $this->projectRepository->like($id);
+        http_response_code(200);
+    }
+    public function dislike (int $id)
+    {
+        $this->projectRepository->dislike($id);
+        http_response_code(200);
     }
 
 

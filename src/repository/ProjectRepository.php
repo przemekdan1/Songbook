@@ -65,7 +65,10 @@ class ProjectRepository extends Repository
             $result[] = new models\Project(
                 $project['title'],
                 $project['description'],
-                $project['image']
+                $project['image'],
+                $project['like'],
+                $project['dislike'],
+                $project['id_project']
             );
         }
 
@@ -83,6 +86,23 @@ class ProjectRepository extends Repository
         $statement->execute();
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function like(int $id){
+        $statement = $this->database->connect()->prepare('
+            UPDATE projects SET "like" = "like" + 1 WHERE id_project = :id
+        ');
+
+        $statement->bindParam(':id',$id,PDO::PARAM_INT);
+        $statement->execute();
+    }
+    public function dislike(int $id){
+        $statement = $this->database->connect()->prepare('
+            UPDATE projects SET "dislike" = "dislike" + 1 WHERE id_project = :id
+        ');
+
+        $statement->bindParam(':id',$id,PDO::PARAM_INT);
+        $statement->execute();
     }
 
 }

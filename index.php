@@ -13,5 +13,7 @@ Routing::post('login','SecurityController');
 Routing::post('addProjects','ProjectController');
 Routing::post('register', 'SecurityController');
 Routing::post('search', 'ProjectController');
+Routing::get('like','ProjectController');
+Routing::get('dislike','ProjectController');
 
 Routing::run($path);

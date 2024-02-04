@@ -44,14 +44,14 @@
             </header>
             <section class="projects">
                 <?php foreach ($projects as $project): ?>
-                <div id="project-1">
+                <div id="<?= $project->getId() ?>">
                     <img src="public/uploads/<?=$project->getImage(); ?>">
                     <div>
                         <h2><?=$project->getTitle() ?></h2>
                         <p><?=$project->getDescription() ?></p>
                         <div class="social-section">
-                            <i class="fas fa-heart"> 600</i>
-                            <i class="fas fa-minus-square"> 121</i>
+                            <i class="fas fa-heart"><?=$project->getLike() ?></i>
+                            <i class="fas fa-minus-square"><?=$project->getDislike() ?></i>
                         </div>
                     </div>
                 </div>
