@@ -3,6 +3,7 @@
 namespace repository;
 use DateTime;
 use models;
+use PDO;
 use Repository;
 
 require_once 'Repository.php';
@@ -50,5 +51,25 @@ class ProjectRepository extends Repository
         ]);
     }
 
+    public function getProjects(): array
+    {
+        $result = [];
+
+        $statement = $this->database->connect()->prepare('
+            SELECT * FROM projects
+        ');
+        $statement->execute();
+        $projects = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($projects as $project) {
+            $result[] = new models\Project(
+                $project['title'],
+                $project['description'],
+                $project['image']
+            );
+        }
+
+        return $result;
+    }
 
 }

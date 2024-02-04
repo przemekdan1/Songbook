@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/projects.css">
 
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-    <title>PROJECTS</title>
+    <title>Projects</title>
 </head>
 
 <body>
@@ -43,8 +43,9 @@
                 </div>
             </header>
             <section class="projects">
+                <?php foreach ($projects as $project): ?>
                 <div id="project-1">
-                    <img src="public/uploads/<?=$project->getImage() ?>">
+                    <img src="public/uploads/<?=$project->getImage(); ?>">
                     <div>
                         <h2><?=$project->getTitle() ?></h2>
                         <p><?=$project->getDescription() ?></p>
@@ -54,6 +55,7 @@
                         </div>
                     </div>
                 </div>
+                <?php endforeach;  ?>
             </section>
         </main>
     </div>

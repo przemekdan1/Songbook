@@ -17,6 +17,11 @@ class ProjectController extends AppController
         $this->projectRepository = new repository\ProjectRepository();
     }
 
+    public function projects()
+    {
+        $projects = $this->projectRepository->getProjects();
+        $this->render('projects',['projects'=>$projects]);
+    }
     public function addProjects()
     {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file']))
@@ -29,7 +34,7 @@ class ProjectController extends AppController
             $project = new \models\Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
             $this->projectRepository->addProject($project);
 
-            return $this->render("projects",['messages' => $this->messages, 'project'=>$project]);
+            return $this->render("projects",['messages' => $this->messages, 'projects'=>$this->projectRepository->getProjects()]);
         }
         $this->render("addProjects",['messages' => $this->messages]);
     }
