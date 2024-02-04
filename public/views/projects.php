@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/projects.css">
 
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>Projects</title>
 </head>
 
@@ -33,9 +34,8 @@
         <main>
             <header>
                 <div class="search-bar">
-                    <form>
-                        <input placeholder="search project">
-                    </form>
+                    <input placeholder="search project">
+
                 </div>
                 <div class="add-project">
                     <i class="fas fa-plus"></i>
@@ -60,3 +60,17 @@
         </main>
     </div>
 </body>
+
+<template id="project-template">
+    <div id="">
+        <img src="">
+        <div>
+            <h2>title<</h2>
+            <p>description</p>
+            <div class="social-section">
+                <i class="like"> 0</i>
+                <i class="dislike"> 0</i>
+            </div>
+        </div>
+    </div>
+</template>

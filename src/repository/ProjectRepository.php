@@ -72,4 +72,17 @@ class ProjectRepository extends Repository
         return $result;
     }
 
+    public function getProjectsByTitle(string $searchString)
+    {
+        $searchString = '%'.strtolower($searchString).'%';
+
+        $statement = $this->database->connect()->prepare('
+            SELECT * FROM projects WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
+        ');
+        $statement->bindParam(':search',$searchString,PDO::PARAM_STR);
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
