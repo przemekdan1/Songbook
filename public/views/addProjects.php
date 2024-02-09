@@ -4,44 +4,16 @@
     <link rel="stylesheet" type="text/css" href="public/css/projects.css">
 
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-    <title>PROJECTS</title>
+    <title>Śpiewnik HK | Dodawnanie piosenek</title>
 </head>
 
 <body>
+    <div class="top-bar"></div>
     <div class="base-container">
         <nav>
             <img src="public/img/logo.svg">
-            <ul>
-                <li>
-                    <i class="fas fa-project-diagram"></i>
-                    <a href="#" class="button">projects</a>
-                </li>
-                <li>
-                    <i class="fas fa-project-diagram"></i>
-                    <a href="#" class="button">projects</a>
-                </li>
-                <li>
-                    <i class="fas fa-project-diagram"></i>
-                    <a href="#" class="button">projects</a>
-                </li>
-                <li>
-                    <i class="fas fa-project-diagram"></i>
-                    <a href="#" class="button">projects</a>
-                </li>
-            </ul>
         </nav>
         <main>
-            <header>
-                <div class="search-bar">
-                    <form>
-                        <input placeholder="search project">
-                    </form>
-                </div>
-                <div class="add-project">
-                    <i class="fas fa-plus"></i>
-                    add project
-                </div>
-            </header>
             <section class="project-form">
                 <h1>Upload</h1>
                 <form action="addProjects" method="POST" ENCTYPE="multipart/form-data">
@@ -62,4 +34,10 @@
             </section>
         </main>
     </div>
+    <div class="settings">
+        <p>KONTO</p>
+
+        <a href="#" class="button"><img src="public/img/Vector.svg">Profil</a>
+    </div>
+    <div class="bottom-bar"></div>
 </body>

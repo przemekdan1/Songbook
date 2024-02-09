@@ -80,5 +80,10 @@ class ProjectController extends AppController
         return true;
     }
 
+    public function showSong()
+    {
+        $this->render("showSong");
+    }
+
 
 }

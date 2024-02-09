@@ -15,5 +15,6 @@ Routing::post('register', 'SecurityController');
 Routing::post('search', 'ProjectController');
 Routing::get('like','ProjectController');
 Routing::get('dislike','ProjectController');
+Routing::get('showSong','ProjectController');
 
 Routing::run($path);
