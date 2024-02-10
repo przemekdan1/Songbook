@@ -2,10 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/projects.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Poppins:wght@200;400&family=Roboto+Condensed:wght@500&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
@@ -39,8 +36,8 @@
 
                 </div>
                 <div class="add-project">
-                    <i class="fas fa-plus"></i>
-                    add project
+                    <a href="/addProjects">DODAJ PIOSENKE</a>
+                    <h1>(dostepne)</h1>
                 </div>
             </header>
             <section class="projects">
@@ -65,8 +62,7 @@
     </div>
     <div class="settings">
         <p>KONTO</p>
-
-        <a href="#" class="button"><img src="public/img/profile_icon.svg">Profil</a>
+        <a href="/profile" class="button"><img src="public/img/profile_icon.svg">Profil</a>
     </div>
     <div class="bottom-bar"></div>
 </body>

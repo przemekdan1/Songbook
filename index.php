@@ -16,5 +16,8 @@ Routing::post('search', 'ProjectController');
 Routing::get('like','ProjectController');
 Routing::get('dislike','ProjectController');
 Routing::get('showSong','ProjectController');
+Routing::get('profile','ProjectController');
+Routing::get('profileSettings','ProjectController');
+Routing::get('admin','ProjectController');
 
 Routing::run($path);

@@ -27,7 +27,7 @@ class ProjectRepository extends Repository
 
         return new \models\Project(
             $project['title'],
-            $project['description'],
+            $project['id_artist'],
             $project['image'],
         );
     }
@@ -64,11 +64,11 @@ class ProjectRepository extends Repository
         foreach ($projects as $project) {
             $result[] = new models\Project(
                 $project['title'],
-                $project['description'],
+                $project['id_artist'],
                 $project['image'],
                 $project['like'],
                 $project['dislike'],
-                $project['id_project']
+                $project['id_song']
             );
         }
 
@@ -80,7 +80,7 @@ class ProjectRepository extends Repository
         $searchString = '%'.strtolower($searchString).'%';
 
         $statement = $this->database->connect()->prepare('
-            SELECT * FROM projects WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
+        SELECT * FROM vsong_informations WHERE LOWER(title) LIKE :search OR LOWER(artist_name) LIKE :search OR LOWER(category_name) LIKE :search
         ');
         $statement->bindParam(':search',$searchString,PDO::PARAM_STR);
         $statement->execute();

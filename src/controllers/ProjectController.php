@@ -11,6 +11,21 @@ class ProjectController extends AppController
     private $messages = [];
     private $projectRepository;
 
+    private function validate($file) : bool
+    {
+        if ($file['size'] > self::MAX_FILE_SIZE) {
+            $this->messages[] = 'File is too large for destination file system.';
+            return false;
+        }
+
+        if (!isset($file['type']) || !in_array($file['type'], self::SUPPORTED_TYPES)) {
+            $this->messages[] = 'File type is not supported.';
+            return false;
+        }
+        return true;
+    }
+
+
     public function __construct()
     {
         parent::__construct();
@@ -66,23 +81,22 @@ class ProjectController extends AppController
     }
 
 
-    private function validate($file) : bool
-    {
-        if ($file['size'] > self::MAX_FILE_SIZE) {
-            $this->messages[] = 'File is too large for destination file system.';
-            return false;
-        }
-
-        if (!isset($file['type']) || !in_array($file['type'], self::SUPPORTED_TYPES)) {
-            $this->messages[] = 'File type is not supported.';
-            return false;
-        }
-        return true;
-    }
-
     public function showSong()
     {
         $this->render("showSong");
+    }
+    public function profile()
+    {
+        $projects = $this->projectRepository->getProjects();
+        $this->render("profilePage", ['projects' => $projects]);
+    }
+    public function profileSettings()
+    {
+        $this->render("profileSettings");
+    }
+    public function admin()
+    {
+        $this->render("adminPanel");
     }
 
 

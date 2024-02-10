@@ -47,6 +47,14 @@ section.project-form {
     flex-direction: column;
 }
 
+.project-form h1{
+    color: black;
+    font-size: 34px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
 .projects h2{
     color: black;
     font-size: 24px;
@@ -71,11 +79,3 @@ section.project-form {
     font-weight: 300;
 }
 
-.settings p{
-    text-align: left;
-    color: #868E96;
-    font-size: 16px;
-    font-family: Roboto;
-    font-weight: 500;
-    word-wrap: break-word;
-}

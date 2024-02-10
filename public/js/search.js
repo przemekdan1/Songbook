@@ -44,8 +44,8 @@ function createProject(project) {
     const div = clone.querySelector("div");
     div.id = project.id;
 
-    const image = clone.querySelector("img");
-    image.src = `/public/uploads/${project.image}`;
+    //const image = clone.querySelector("img");
+    //image.src = `/public/uploads/${project.image}`;
 
     const title = clone.querySelector("h2");
     title.innerHTML = project.title;
