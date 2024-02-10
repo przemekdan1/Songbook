@@ -22,17 +22,17 @@
                 <li>
                     <p>KATEGORIE </p>
                 </li>
-                <li>
-                    <a href="#" class="button">Kategorie</a>
-                </li>
-
-
+                <?php foreach ($categories as $category): ?>
+                    <li>
+                        <a href="#" class="button"><?=$category->getCategoryName() ?></a>
+                    </li>
+                <?php endforeach;  ?>
             </ul>
         </nav>
         <main>
             <header>
                 <div class="search-bar">
-                    <input placeholder="search project">
+                    <input id="search-input" placeholder="Search">
 
                 </div>
                 <div class="add-project">
@@ -69,7 +69,6 @@
 
 <template id="project-template">
     <div id="">
-        <img src="">
         <div>
             <h2>title<</h2>
             <p>description</p>

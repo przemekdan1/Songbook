@@ -6,7 +6,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
-        <script type="text/javascript" src="./public/js/script.js" defer></script>
+
+        <script type="text/javascript" src="./public/js/properLoginValidation.js" defer></script>
 
         <title> Register </title>
     </head>

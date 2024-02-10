@@ -35,8 +35,11 @@ class ProjectController extends AppController
     public function projects()
     {
         $projects = $this->projectRepository->getProjects();
-        $this->render('projects',['projects'=>$projects]);
+        $categories = $this->projectRepository->getCategories();
+        $this->render('projects',['projects'=>$projects,'categories'=>$categories]);
     }
+
+
     public function addProjects()
     {
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file']))

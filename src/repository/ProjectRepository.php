@@ -7,7 +7,8 @@ use PDO;
 use Repository;
 
 require_once 'Repository.php';
-require_once __DIR__ . '/../models/Project.php';
+require_once __DIR__.'/../models/Category.php';
+
 
 class ProjectRepository extends Repository
 {
@@ -69,6 +70,26 @@ class ProjectRepository extends Repository
                 $project['like'],
                 $project['dislike'],
                 $project['id_song']
+            );
+        }
+
+        return $result;
+    }
+
+    public function getCategories(): array
+    {
+        $result = [];
+
+        $statement = $this->database->connect()->prepare('
+            SELECT * FROM category
+        ');
+        $statement->execute();
+        $categories = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($categories as $category) {
+            $result[] = new models\Category(
+                $category['id_category'],
+                $category['category_name']
             );
         }
 

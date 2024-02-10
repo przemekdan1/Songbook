@@ -19,16 +19,6 @@
 <div class="base-container">
     <nav>
         <img src="public/img/logo.svg">
-        <ul>
-            <li>
-                <p>KATEGORIE </p>
-            </li>
-            <li>
-                <a href="#" class="button">Kategorie</a>
-            </li>
-
-
-        </ul>
     </nav>
     <main class="profile">
         <div class="user-profile">
