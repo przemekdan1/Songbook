@@ -81,11 +81,12 @@ form p{
     word-wrap: break-word;
 }
 
-.welcome-text h5{
+.welcome-text h5,.register-forward h5{
     margin: auto;
     font-family: Poppins; 
     font-weight: 400;
     color: #636364;
+    margin-right: 5px;
 }
 
 @media only screen and (max-device-width: 420px) {
@@ -132,6 +133,10 @@ form p{
         align-items: center;
     }
 
+    input{
+        margin: 10px;
+    }
+
 }
 
 input.no-valid {
@@ -139,4 +144,33 @@ input.no-valid {
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
     outline: none;
+}
+
+.sign-in-button, .sign-up-button{
+    margin-top: 10px;
+    padding: 5px;
+    background: #009041;
+    box-shadow: 0px 4px 10px rgba(233, 68, 75, 0.25);
+    border-radius: 12px;
+    color: white;
+    border-color: transparent;
+    letter-spacing: 1px;
+}
+
+.register-forward{
+    display: flex;
+}
+.register-forward a{
+    color: #009041;
+    font-size: 12px;
+    font-family: Poppins;
+    font-weight: 500;
+    letter-spacing: 0.36px;
+    word-wrap: break-word;
+}
+
+.messages{
+    color: red;
+    display: flex;
+    justify-content: center;
 }

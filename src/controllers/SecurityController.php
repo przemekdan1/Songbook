@@ -9,6 +9,11 @@ class SecurityController extends AppController
 
     public function login()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
+
         $userRepository = new UserRepository();
 
 
@@ -43,6 +48,11 @@ class SecurityController extends AppController
 
     public function register()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
+
         if (!$this->isPost()) {
             return $this->render('register');
         }
@@ -56,14 +66,21 @@ class SecurityController extends AppController
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        //TODO try to use better hash function
+
         $user = new models\User($email, md5($password));
 
 
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
-    }
 
+
+    }
+    public function logout()
+    {
+        session_start();
+        session_unset();
+        header('Location: /index');
+    }
 
 }

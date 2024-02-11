@@ -7,8 +7,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-        <script type="text/javascript" src="./public/js/properLoginValidation.js" defer></script>
-
         <title> Register </title>
     </head>
 
@@ -48,7 +46,7 @@
                         <input name="password" type="password" placeholder="**********">
                         <p>Repeat password</p>
                         <input name="confirmedPassword" type="password" placeholder="**********">
-                        <button type="submit">Sign up</button>
+                        <button class="sign-up-button" type="submit">Sign up</button>
                     </form>
                 </div>
             </div>

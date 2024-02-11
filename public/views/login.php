@@ -44,7 +44,11 @@
                         <input name="email" type="text" placeholder="Enter your email">
                         <p>Password</p>
                         <input name="password" type="password" placeholder="Enter your password">
-                        <button type="submit">Sign up</button>
+                        <button class="sign-in-button" type="submit">Sign in</button>
+                        <div class="register-forward">
+                            <h5>Don’t have account? </h5>
+                            <a href="/register"> Sing up</a>
+                        </div>
                     </form>
                 </div>
             </div>

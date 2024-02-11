@@ -25,10 +25,10 @@ class UserRepository extends Repository
         );
     }
 
-    public function addUser(User $user)
+    public function addUser(models\User $user)
     {
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO users (email, password)
+            INSERT INTO public."user" (email, password)
             VALUES (?, ?)
         ');
 

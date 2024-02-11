@@ -34,6 +34,10 @@ class ProjectController extends AppController
 
     public function projects()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
         $projects = $this->projectRepository->getProjects();
         $categories = $this->projectRepository->getCategories();
         $this->render('projects',['projects'=>$projects,'categories'=>$categories]);
@@ -59,6 +63,7 @@ class ProjectController extends AppController
 
     public function search()
     {
+
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
         if ($contentType === "application/json") {
@@ -86,19 +91,35 @@ class ProjectController extends AppController
 
     public function showSong()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
         $this->render("showSong");
     }
     public function profile()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
         $projects = $this->projectRepository->getProjects();
         $this->render("profilePage", ['projects' => $projects]);
     }
     public function profileSettings()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
         $this->render("profileSettings");
     }
     public function admin()
     {
+        if($this->isSession())
+        {
+            header('Location: /index');
+        }
         $this->render("adminPanel");
     }
 

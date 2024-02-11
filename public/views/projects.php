@@ -60,6 +60,7 @@
     <div class="settings">
         <p>KONTO</p>
         <a href="/profile" class="button"><img src="public/img/profile_icon.svg">Profil</a>
+        <a href="/index" class="button"><img src="public/img/logout_icon.svg">Wyloguj się</a>
     </div>
     <div class="bottom-bar"></div>
 </body>

@@ -13,8 +13,6 @@ class User
     {
         $this->email = $email;
         $this->password = $password;
-        //$this->name = $name;
-        //$this->surname = $surname;
     }
 
     public function getEmail(): string
