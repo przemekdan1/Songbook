@@ -81,7 +81,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Meikelele/MyFuelPal.git
+   git clone https://github.com/przemekdan1/Songbook.git
    ```
 2. Build the Docker image
    ```sh
