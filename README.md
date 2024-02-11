@@ -1,6 +1,8 @@
 # Songbook
 <p>
-  Songbook app is an digital adaptation of 
+  Songbook is a modern application that serves as a digital adaptation of a traditional songbook. It has been specifically designed for the club “Hawiarska Koliba” to enable quick and easy song search from an extensive database.
+
+The Songbook application transforms the singing experience by transitioning the traditional paper songbook into a digital format. Users can browse and search for songs at any time, making it an ideal tool for every music lover.
   <br />
   <a href="https://github.com/przemekdan1/Songbook"><strong>Explore the docs »</strong></a>
 </p>
