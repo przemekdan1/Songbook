@@ -46,19 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const clone = template.content.cloneNode(true);
 
         const div = clone.querySelector("div");
-        div.id = project.id;
+        div.id = project.id_song;
 
         const title = clone.querySelector("h2");
         title.innerHTML = project.title;
 
-        const description = clone.querySelector("p");
-        description.innerHTML = project.description;
+        const description = clone.querySelector(".description");
+        description.innerHTML = project.artist_name;
 
-        const like = clone.querySelector(".like");
-        like.innerText = project.like;
-
-        const dislike = clone.querySelector(".dislike");
-        dislike.innerText = project.dislike;
+        const category = clone.querySelector(".category");
+        category.innerText = project.category_name;
 
         projectContainer.appendChild(clone);
     }
@@ -77,20 +74,16 @@ function createProject(project) {
     const clone = template.content.cloneNode(true);
 
     const div = clone.querySelector("div");
-    div.id = project.id;
-
+    div.id = project.id_song;
 
     const title = clone.querySelector("h2");
     title.innerHTML = project.title;
 
-    const description = clone.querySelector("p");
-    description.innerHTML = project.description;
+    const description = clone.querySelector(".description");
+    description.innerHTML = project.artist_name;
 
-    const like = clone.querySelector(".like");
-    like.innerText = project.like;
-
-    const dislike = clone.querySelector(".dislike");
-    dislike.innerText = project.dislike;
+    const category = clone.querySelector(".category");
+    category.innerText = project.category_name;
 
     projectContainer.appendChild(clone);
 }

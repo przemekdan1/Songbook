@@ -33,19 +33,16 @@
             <p>Ulubione piosenki</p>
             <section class="projects">
                 <?php foreach ($projects as $project): ?>
-                    <div id="<?= $project->getId() ?>">
+                    <div id="<?= $project->getIdSong() ?>">
                         <div>
                             <h2><?=$project->getTitle() ?></h2>
                             <div>
-                                <p>Wyk: <?=$project->getDescription() ?></p>
-                                <p>Kategoria: </p>
+                                <p>Wyk: <?=$project->getArtistName() ?></p>
+                                <p>Kategoria: <?=$project->getCategoryName() ?></p>
                             </div>
 
                         </div>
-                        <div class="social-section">
-                            <i class="fas fa-heart">Like: <?=$project->getLike() ?></i>
-                            <i class="fas fa-minus-square">Dislike: <?=$project->getDislike() ?></i>
-                        </div>
+
                     </div>
                 <?php endforeach;  ?>
             </section>

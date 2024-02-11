@@ -7,7 +7,7 @@ class UserRepository extends Repository
     public function getUser(string $email): ?models\User
     {
         $statement = $this->database->connect()->prepare('
-        SELECT * FROM public.users WHERE email = :email');
+        SELECT * FROM public.user WHERE email = :email');
 
         $statement->bindParam(':email', $email, PDO::PARAM_STR);
         $statement->execute();

@@ -36,25 +36,22 @@
 
                 </div>
                 <div class="add-project">
+                    <img src="/public/img/plus.svg"/>
                     <a href="/addProjects">DODAJ PIOSENKE</a>
-                    <h1>(dostepne)</h1>
                 </div>
             </header>
             <section class="projects">
                 <?php foreach ($projects as $project): ?>
-                <div id="<?= $project->getId() ?>">
+                <div id="<?= $project->getIdSong() ?>">
                     <div>
                         <h2><?=$project->getTitle() ?></h2>
                         <div>
-                            <p>Wyk: <?=$project->getDescription() ?></p>
-                            <p>Kategoria: </p>
+                            <p>Wyk: <?=$project->getArtistName() ?></p>
+                            <p>Kategoria: <?=$project->getCategoryName() ?></p>
                         </div>
 
                     </div>
-                    <div class="social-section">
-                        <i class="fas fa-heart">Like: <?=$project->getLike() ?></i>
-                        <i class="fas fa-minus-square">Dislike: <?=$project->getDislike() ?></i>
-                    </div>
+
                 </div>
                 <?php endforeach;  ?>
             </section>
@@ -71,11 +68,8 @@
     <div id="">
         <div>
             <h2>title<</h2>
-            <p>description</p>
-            <div class="social-section">
-                <i class="like"> 0</i>
-                <i class="dislike"> 0</i>
-            </div>
+            <p class="description">description</p>
+            <p class="category">category</p>
         </div>
     </div>
 </template>

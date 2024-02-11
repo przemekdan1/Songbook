@@ -8,6 +8,7 @@ use Repository;
 
 require_once 'Repository.php';
 require_once __DIR__.'/../models/Category.php';
+require_once __DIR__.'/../models/SongInfo.php';
 
 
 class ProjectRepository extends Repository
@@ -57,18 +58,16 @@ class ProjectRepository extends Repository
         $result = [];
 
         $statement = $this->database->connect()->prepare('
-            SELECT * FROM projects
+            SELECT * FROM vsong_informations
         ');
         $statement->execute();
         $projects = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($projects as $project) {
-            $result[] = new models\Project(
+            $result[] = new models\SongInfo(
                 $project['title'],
-                $project['id_artist'],
-                $project['image'],
-                $project['like'],
-                $project['dislike'],
+                $project['artist_name'],
+                $project['category_name'],
                 $project['id_song']
             );
         }
