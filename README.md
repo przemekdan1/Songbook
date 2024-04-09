@@ -58,7 +58,7 @@ The Songbook application transforms the singing experience by transitioning the 
     
   </ol>
 </details>
-
+<p align="right">(<a href="#songbook">back to top</a>)</p>
 
 ### ERD DIAGRAM
 ![image](https://github.com/przemekdan1/Songbook/assets/101727232/801f5d1d-c8c9-4b9a-acc3-d17c3d34615a)
@@ -108,9 +108,8 @@ The Songbook application transforms the singing experience by transitioning the 
    ```
 4. Import Database from sql file
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#songbook">back to top</a>)</p>
 
-## Roadmap
 
 ## Contributing
 
@@ -125,7 +124,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin features/Features`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#songbook">back to top</a>)</p>
 
 <!-- CONTACT -->
 
