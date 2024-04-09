@@ -7,6 +7,19 @@ The Songbook application transforms the singing experience by transitioning the 
   <a href="https://github.com/przemekdan1/Songbook"><strong>Explore the docs »</strong></a>
 </p>
 
+## Built With
+
+- [![HTML Version](https://img.shields.io/badge/HTML-5-orange)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+- [![CSS Version](https://img.shields.io/badge/CSS-3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [![PHP Version](https://img.shields.io/badge/PHP-v8.2.11-blue)](https://www.php.net/)
+- [![JavaScript Version](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [![Docker Version](https://img.shields.io/badge/Docker-latest-blue)](https://www.docker.com/)
+- [![Nginx Version](https://img.shields.io/badge/Nginx-1.17.8--alpine-brightgreen)](https://nginx.org/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 ## About The Project
 ### Web
 ![image](https://github.com/przemekdan1/Songbook/assets/101727232/78061b24-fba8-4522-a02d-2fbbb90ad05c)
